@@ -22,10 +22,12 @@ Linux Commands :::
 find /var/www/html/downloads \( -name '*.txt' -o -name '*.nfo' -o -name 'www.YTS.MX.jpg' -o -name 'WWW.YIFY-TORRENTS.COM.jpg' -o -name 'WWW.YTS.AG.jpg' \) -type f -print
 
 find /var/www/html/downloads \( -name '*.txt' -o -name '*.nfo' -o -name 'www.YTS.MX.jpg' -o -name 'WWW.YIFY-TORRENTS.COM.jpg' -o -name 'WWW.YTS.AG.jpg' \) -type f -delete
+
 find /var/www/html/downloads/FBI.S07/  -mindepth 2 -type f -print -exec mv {} . \;
 
 
 find /var/www/html/downloads/Tulsa.King  -type f \( -name '*.mkv' \) -printf "%P\n" | sort > playlist.m3u
+
 sed -i "s|^|http://192.168.1.10/downloads/Tulsa.King/|" playlist.m3u
 
 
