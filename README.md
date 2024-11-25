@@ -31,7 +31,9 @@ sed -i "s|^|http://192.168.1.10/downloads/Tulsa.King/|" playlist.m3u
 
 
 find /var/www/html/downloads/FBI.S06.COMPLETE.720p.AMZN.WEBRip.x264-GalaxyTV\[TGx\]  -type f \( -name '*.mkv' \) -printf "%P\n" | sort > fbi.m3u
+
 find /var/www/html/downloads/FBI*  -type f \( -name '*.mkv' \) -printf "%P\n" | sort > fbi07.m3u
+
 sed -i "s|^|http://192.168.1.10/downloads/FBI.S07/|" fbi07.m3u
 
 
