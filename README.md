@@ -14,7 +14,16 @@ Remove-Item 'C:\Users\senoj\Documents\Movies\*' -Recurse -Include *.nfo, *.txt, 
 
 Remove-Item 'C:\Users\senoj\Documents\Movies\*' -Recurse -Include *.nfo, *.txt, WWW.YTS.AG.jpg, WWW.YIFY-TORRENTS.COM.jpg, www.YTS.MX.jpg -Verbose
 
+******************************PS Execution policy ***************************
+Get-ExecutionPolicy
+Restricted
 
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
+
+
+powershell.exe -ExecutionPolicy Bypass -File
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process -Force
+*******************************************************************************************************
 Linux Commands :::
 
 
